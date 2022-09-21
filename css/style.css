@@ -1,0 +1,64 @@
+body {
+  font-family: "Poppins", sans-serif;
+}
+.container {
+  margin: 0 auto;
+  width: 375px;
+  height: 812px;
+  background: linear-gradient(
+    300deg,
+    #5b75ca -5.94%,
+    rgba(247, 248, 251, 0) 103.62%
+  );
+  backdrop-filter: blur(51px);
+  border-radius: 39px;
+}
+.display {
+  padding-top: 300px;
+}
+.keyboard {
+  display: grid;
+  grid-template-columns: repeat(4, 62px);
+  grid-template-rows: repeat(6, 62px);
+  justify-content: center;
+  row-gap: 10px;
+  column-gap: 10px;
+}
+.key {
+  width: 100%;
+  background: linear-gradient(
+    129.7deg,
+    rgba(255, 255, 255, 0.6) -9.69%,
+    rgba(255, 255, 255, 0.4) 114.23%
+  );
+  backdrop-filter: blur(6px);
+  border-radius: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.key:hover {
+  background: linear-gradient(
+    129.7deg,
+    rgb(0 0 0 / 60%) -9.69%,
+    rgba(255, 255, 255, 0.4) 114.23%
+  );
+}
+.func {
+  width: 62px;
+  height: 40px;
+}
+
+.zero {
+  grid-column: 1 / 3;
+}
+.equal {
+  grid-row: 5/7;
+  grid-column: 4/4;
+}
+.number {
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 48px;
+  color: #ffffff;
+}
