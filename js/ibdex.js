@@ -1,12 +1,16 @@
 "use strict"
-let numbers = document.querySelectorAll('.key')
+let numbers = document.querySelectorAll('.num')
 let display = document.getElementById('display')
 let theNum = ""
 let clear = document.getElementById('clear')
+let multiple = document.getElementById('multiply')
 
-clear () =>{ 
 
+let clearFunc = () => { 
+   theNum = ""
+    display.innerHTML = "0"
 }
+
 
 numbers.forEach(button=> {
     button.addEventListener('click', ()=> {
