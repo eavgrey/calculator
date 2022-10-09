@@ -9,7 +9,7 @@ let multiple = document.getElementById('multiply')
 let clearFunc = () => { 
    theNum = ""
     display.innerHTML = "0"
-}
+}   
 
 
 numbers.forEach(button=> {
@@ -19,4 +19,25 @@ numbers.forEach(button=> {
     })
 })
 
+function backspace () {
+    display.innerHTML = display.innerHTML.slice(0, -1)
+    if (  display.innerHTML.length === 0 ){
+        clearFunc()
+    }
+ }
 
+let operator = ""
+let currentNum = display.innerHTML
+
+ function plus (){
+    currentNum = display.innerHTML//6
+    clearFunc()
+operator = "plus"
+ }
+
+
+ function equal (){
+if( operator === "plus") {
+   display.innerHTML = parseFloat(currentNum)  + parseFloat(display.innerHTML) //63
+} 
+ }
