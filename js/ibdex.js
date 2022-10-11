@@ -11,13 +11,19 @@ let clearFunc = () => {
 }   
 
 
-
 numbers.forEach(button=> {
     button.addEventListener('click', ()=> {
+        if(display.innerHTML.includes('.')&& button.classList.contains('dot')) return ;
+        if(display.innerHTML==='0'&& button.classList.contains('dot')) {
+            theNum = "0" 
+        } ;
+       
         theNum+= button.getAttribute("value")
-        display.innerText = theNum
+        display.innerHTML=  theNum
     })
-})
+        
+    })
+
 
 function backspace () {
     display.innerHTML = display.innerHTML.slice(0, -1)
